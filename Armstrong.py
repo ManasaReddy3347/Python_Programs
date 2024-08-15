@@ -1,7 +1,13 @@
-N = int(input("Enter a number: "))
-sum_of_cubes = sum(int(digit) ** 3 for digit in str(N))
-
-if sum_of_cubes == N:
-    print(N, "is an Armstrong number")
+n=int(input())
+num=len(str(n))
+arm_sum=0
+temp=n
+while temp>0:
+    d=temp%10
+    arm_sum+=d**num
+    temp//=10
+if arm_sum==n:
+    print("It is an Armstrong Number")
 else:
-    print(N, "is not an Armstrong number")
+    print("Not an armstrong number")
+    
