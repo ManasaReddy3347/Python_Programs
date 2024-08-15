@@ -1,10 +1,9 @@
-arr = [1, 3, 4, 2, 5, 3]
-seen = set()
-
-for num in arr:
-    if num in seen:
-        print("Duplicate element is:", num)
-        break
-    seen.add(num)
-else:
-    print("no duplicates in array")
+n=int(input())
+ar=list(map(int,input().split()))
+for i in range(n):
+    c=0
+    for j in range(i,n):
+        if(ar[i]==ar[j]):
+            c+=1
+    if c==2:
+        print(ar[i])
